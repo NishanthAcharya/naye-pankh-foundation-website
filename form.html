@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body{
+             display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+         }
+
+            .form-section{
+            height: 500px;
+            width: 80%;
+            background-color:white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            box-shadow:0 4px 15px rgba(0,0,0,0.1);
+
+            }
+.input{
+    width:80%;
+    max-width:400px;
+    padding:10px;
+    border-radius:12px;
+}
+            .btn{
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            background-color: white;
+            color: blue;
+            cursor: pointer;
+            border: 1px black solid;
+        }
+    </style>
+</head>
+<body>
+        <div class="form-section" id="formSection" >
+            <h2>Volunteer Application</h2>
+
+            <input type="text" placeholder="Your Name" class="input username"><br><br>
+            <input type="email" placeholder="Your Email" class="input emailid"><br><br>
+            <input type="tel" placeholder="Your Phone Number" class="input tele"><br><br>
+            <button class="btn">Submit</button>
+    </div>
+    <script>
+        document.querySelector('.btn').addEventListener('click',()=>{
+            submmitt();
+        })
+        function submmitt()
+        {
+        let name = document.querySelector('.username').value;
+        let email = document.querySelector('.emailid').value;
+        let tel = document.querySelector('.tele').value;
+
+        if (name==="" || email === "" || tel === "")
+        {
+            alert("please fill all the details !")
+        }
+        else{
+            alert("thank you ")
+        }
+    }
+    </script>
+
+</body>
+</html>
